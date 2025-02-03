@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_39086c9fbfb4fc2d244940f305848000 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_39086c9fbfb4fc2d244940f305848000" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_39086c9fbfb4fc2d244940f305848000 = L.map(
+                "map_39086c9fbfb4fc2d244940f305848000",
+                {
+                    center: [13.1262694, 77.6297344],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 14,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_92276b5671ef17f83535182f66e9bb29 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_92276b5671ef17f83535182f66e9bb29.addTo(map_39086c9fbfb4fc2d244940f305848000);
+        
+    
+            var poly_line_52dc49ef2e61f0b4e810709f3e64aa4d = L.polyline(
+                [[13.1262694, 77.6297344], [13.1262694, 77.6297344]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(map_39086c9fbfb4fc2d244940f305848000);
+        
+    
+            var marker_f7b66b09d0804820bd551783e5ac9fe6 = L.marker(
+                [13.1262694, 77.6297344],
+                {
+}
+            ).addTo(map_39086c9fbfb4fc2d244940f305848000);
+        
+    
+        var popup_43ea6ee5c6f06b3d37b69e620b53ad09 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_20bd9c1cb4373154eb45b97cb7a9749b = $(`<div id="html_20bd9c1cb4373154eb45b97cb7a9749b" style="width: 100.0%; height: 100.0%;">Truck 1 Stop 1 (Depot)</div>`)[0];
+                popup_43ea6ee5c6f06b3d37b69e620b53ad09.setContent(html_20bd9c1cb4373154eb45b97cb7a9749b);
+            
+        
+
+        marker_f7b66b09d0804820bd551783e5ac9fe6.bindPopup(popup_43ea6ee5c6f06b3d37b69e620b53ad09)
+        ;
+
+        
+    
+    
+            var marker_d92c285a8eb5d3fb19d85d5d77a9dd5f = L.marker(
+                [13.1262694, 77.6297344],
+                {
+}
+            ).addTo(map_39086c9fbfb4fc2d244940f305848000);
+        
+    
+        var popup_57e6a55f52dee2e8516d5437a2cbeb31 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_367719ed22245dca26e49e8bf238cd78 = $(`<div id="html_367719ed22245dca26e49e8bf238cd78" style="width: 100.0%; height: 100.0%;">Truck 1 Stop 2 (Depot)</div>`)[0];
+                popup_57e6a55f52dee2e8516d5437a2cbeb31.setContent(html_367719ed22245dca26e49e8bf238cd78);
+            
+        
+
+        marker_d92c285a8eb5d3fb19d85d5d77a9dd5f.bindPopup(popup_57e6a55f52dee2e8516d5437a2cbeb31)
+        ;
+
+        
+    
+    
+            var poly_line_947da569c3bef87d99213a23f3f431dc = L.polyline(
+                [[13.1262694, 77.6297344], [13.1262694, 77.6297344]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(map_39086c9fbfb4fc2d244940f305848000);
+        
+    
+            var marker_a633f966680c84e3d887af8fc6aaccab = L.marker(
+                [13.1262694, 77.6297344],
+                {
+}
+            ).addTo(map_39086c9fbfb4fc2d244940f305848000);
+        
+    
+        var popup_11629fd7328b29c245629e6398f96cbd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e04673df7f97d580202811155b2e18e8 = $(`<div id="html_e04673df7f97d580202811155b2e18e8" style="width: 100.0%; height: 100.0%;">Truck 2 Stop 1 (Depot)</div>`)[0];
+                popup_11629fd7328b29c245629e6398f96cbd.setContent(html_e04673df7f97d580202811155b2e18e8);
+            
+        
+
+        marker_a633f966680c84e3d887af8fc6aaccab.bindPopup(popup_11629fd7328b29c245629e6398f96cbd)
+        ;
+
+        
+    
+    
+            var marker_4e8f1bc3bf7494a297f63a8a8dd5bd0e = L.marker(
+                [13.1262694, 77.6297344],
+                {
+}
+            ).addTo(map_39086c9fbfb4fc2d244940f305848000);
+        
+    
+        var popup_775c668705a80173f4e65e0f81abc3de = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2db6e6398437f3ec2678573be5dcba12 = $(`<div id="html_2db6e6398437f3ec2678573be5dcba12" style="width: 100.0%; height: 100.0%;">Truck 2 Stop 2 (Depot)</div>`)[0];
+                popup_775c668705a80173f4e65e0f81abc3de.setContent(html_2db6e6398437f3ec2678573be5dcba12);
+            
+        
+
+        marker_4e8f1bc3bf7494a297f63a8a8dd5bd0e.bindPopup(popup_775c668705a80173f4e65e0f81abc3de)
+        ;
+
+        
+    
+    
+            var poly_line_8b043546c6434464f6eb3d2df1f78b1b = L.polyline(
+                [[13.1262694, 77.6297344], [13.1262694, 77.6297344]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(map_39086c9fbfb4fc2d244940f305848000);
+        
+    
+            var marker_d34856078b4211f6b0076ac8ef1d9dd0 = L.marker(
+                [13.1262694, 77.6297344],
+                {
+}
+            ).addTo(map_39086c9fbfb4fc2d244940f305848000);
+        
+    
+        var popup_1d8fd89b7427fa7d2b9b9143d66ef341 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3c43b0a5c9a99d9e1bb349890d75a390 = $(`<div id="html_3c43b0a5c9a99d9e1bb349890d75a390" style="width: 100.0%; height: 100.0%;">Truck 3 Stop 1 (Depot)</div>`)[0];
+                popup_1d8fd89b7427fa7d2b9b9143d66ef341.setContent(html_3c43b0a5c9a99d9e1bb349890d75a390);
+            
+        
+
+        marker_d34856078b4211f6b0076ac8ef1d9dd0.bindPopup(popup_1d8fd89b7427fa7d2b9b9143d66ef341)
+        ;
+
+        
+    
+    
+            var marker_13ba03ff38f0fd659798601f184d11ef = L.marker(
+                [13.1262694, 77.6297344],
+                {
+}
+            ).addTo(map_39086c9fbfb4fc2d244940f305848000);
+        
+    
+        var popup_9fd8741c16160f33d4f8ad676b5598e6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_44ca32491470414dca3eee6897866647 = $(`<div id="html_44ca32491470414dca3eee6897866647" style="width: 100.0%; height: 100.0%;">Truck 3 Stop 2 (Depot)</div>`)[0];
+                popup_9fd8741c16160f33d4f8ad676b5598e6.setContent(html_44ca32491470414dca3eee6897866647);
+            
+        
+
+        marker_13ba03ff38f0fd659798601f184d11ef.bindPopup(popup_9fd8741c16160f33d4f8ad676b5598e6)
+        ;
+
+        
+    
+    
+            var poly_line_60c424d166d68567f71e9e86c4023ced = L.polyline(
+                [[13.1262694, 77.6297344], [13.1262694, 77.6297344], [13.1262694, 77.6297344], [13.1262694, 77.6297344], [13.1262694, 77.6297344], [13.1262694, 77.6297344], [13.1262694, 77.6297344], [13.1262694, 77.6297344], [13.1262694, 77.6297344], [13.1262694, 77.6297344], [13.1262694, 77.6297344], [13.1262694, 77.6297344]],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(map_39086c9fbfb4fc2d244940f305848000);
+        
+    
+            var marker_96bbb8ee4c29b66eea6408c6b06f0c4e = L.marker(
+                [13.1262694, 77.6297344],
+                {
+}
+            ).addTo(map_39086c9fbfb4fc2d244940f305848000);
+        
+    
+        var popup_2796dcf9d3381a730f587fe32e90f3bb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3b943103f89473d804d3408adcd68b7f = $(`<div id="html_3b943103f89473d804d3408adcd68b7f" style="width: 100.0%; height: 100.0%;">Truck 4 Stop 1 (Depot)</div>`)[0];
+                popup_2796dcf9d3381a730f587fe32e90f3bb.setContent(html_3b943103f89473d804d3408adcd68b7f);
+            
+        
+
+        marker_96bbb8ee4c29b66eea6408c6b06f0c4e.bindPopup(popup_2796dcf9d3381a730f587fe32e90f3bb)
+        ;
+
+        
+    
+    
+            var marker_9f8ec0e25f46021317ae1a29ad6e3f0f = L.marker(
+                [13.1262694, 77.6297344],
+                {
+}
+            ).addTo(map_39086c9fbfb4fc2d244940f305848000);
+        
+    
+        var popup_7a84daaf981c1f0ac48183ffe7d41f38 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c2b8b989814b37f30169ae221c896713 = $(`<div id="html_c2b8b989814b37f30169ae221c896713" style="width: 100.0%; height: 100.0%;">Truck 4 Stop 2 (Depot)</div>`)[0];
+                popup_7a84daaf981c1f0ac48183ffe7d41f38.setContent(html_c2b8b989814b37f30169ae221c896713);
+            
+        
+
+        marker_9f8ec0e25f46021317ae1a29ad6e3f0f.bindPopup(popup_7a84daaf981c1f0ac48183ffe7d41f38)
+        ;
+
+        
+    
+    
+            var marker_02bcdea35e2c013580f913c3997e83a4 = L.marker(
+                [13.1262694, 77.6297344],
+                {
+}
+            ).addTo(map_39086c9fbfb4fc2d244940f305848000);
+        
+    
+        var popup_ebead1991b1b1697e577cf251a5eb46b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3c387cae538d69529cd30cd86d4ff150 = $(`<div id="html_3c387cae538d69529cd30cd86d4ff150" style="width: 100.0%; height: 100.0%;">Truck 4 Stop 3 (Depot)</div>`)[0];
+                popup_ebead1991b1b1697e577cf251a5eb46b.setContent(html_3c387cae538d69529cd30cd86d4ff150);
+            
+        
+
+        marker_02bcdea35e2c013580f913c3997e83a4.bindPopup(popup_ebead1991b1b1697e577cf251a5eb46b)
+        ;
+
+        
+    
+    
+            var marker_2e73f6bce9dd1abe8f2f5802677dd1b8 = L.marker(
+                [13.1262694, 77.6297344],
+                {
+}
+            ).addTo(map_39086c9fbfb4fc2d244940f305848000);
+        
+    
+        var popup_760ad52d097181d5c12b2213cffa945b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_dc3dd204b9ea2f92aa0b7583acdcadd3 = $(`<div id="html_dc3dd204b9ea2f92aa0b7583acdcadd3" style="width: 100.0%; height: 100.0%;">Truck 4 Stop 4 (Depot)</div>`)[0];
+                popup_760ad52d097181d5c12b2213cffa945b.setContent(html_dc3dd204b9ea2f92aa0b7583acdcadd3);
+            
+        
+
+        marker_2e73f6bce9dd1abe8f2f5802677dd1b8.bindPopup(popup_760ad52d097181d5c12b2213cffa945b)
+        ;
+
+        
+    
+    
+            var marker_1536ef1f97614d670e312a3a69e3c8b7 = L.marker(
+                [13.1262694, 77.6297344],
+                {
+}
+            ).addTo(map_39086c9fbfb4fc2d244940f305848000);
+        
+    
+        var popup_20fc881d0f642317a2530b0e4dccb753 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_44df99f1ab5f084fb959d9a61f448d6d = $(`<div id="html_44df99f1ab5f084fb959d9a61f448d6d" style="width: 100.0%; height: 100.0%;">Truck 4 Stop 5 (Depot)</div>`)[0];
+                popup_20fc881d0f642317a2530b0e4dccb753.setContent(html_44df99f1ab5f084fb959d9a61f448d6d);
+            
+        
+
+        marker_1536ef1f97614d670e312a3a69e3c8b7.bindPopup(popup_20fc881d0f642317a2530b0e4dccb753)
+        ;
+
+        
+    
+    
+            var marker_c4d2435a8925ba5fb9a3b1e731e07a39 = L.marker(
+                [13.1262694, 77.6297344],
+                {
+}
+            ).addTo(map_39086c9fbfb4fc2d244940f305848000);
+        
+    
+        var popup_a09dc4b860efbbf36145824926ae697b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5b1d8607d0ab70d540381bf679eee384 = $(`<div id="html_5b1d8607d0ab70d540381bf679eee384" style="width: 100.0%; height: 100.0%;">Truck 4 Stop 6 (Depot)</div>`)[0];
+                popup_a09dc4b860efbbf36145824926ae697b.setContent(html_5b1d8607d0ab70d540381bf679eee384);
+            
+        
+
+        marker_c4d2435a8925ba5fb9a3b1e731e07a39.bindPopup(popup_a09dc4b860efbbf36145824926ae697b)
+        ;
+
+        
+    
+    
+            var marker_d609274f91c8c290b7495cec92ce04b9 = L.marker(
+                [13.1262694, 77.6297344],
+                {
+}
+            ).addTo(map_39086c9fbfb4fc2d244940f305848000);
+        
+    
+        var popup_6e1997f1f9b9821c02b91b50d5d3085f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fd2e4bd32e9aa6095bd5e764f835cb17 = $(`<div id="html_fd2e4bd32e9aa6095bd5e764f835cb17" style="width: 100.0%; height: 100.0%;">Truck 4 Stop 7 (Depot)</div>`)[0];
+                popup_6e1997f1f9b9821c02b91b50d5d3085f.setContent(html_fd2e4bd32e9aa6095bd5e764f835cb17);
+            
+        
+
+        marker_d609274f91c8c290b7495cec92ce04b9.bindPopup(popup_6e1997f1f9b9821c02b91b50d5d3085f)
+        ;
+
+        
+    
+    
+            var marker_34438d34acabbcfb2b6b9e7bd716fba3 = L.marker(
+                [13.1262694, 77.6297344],
+                {
+}
+            ).addTo(map_39086c9fbfb4fc2d244940f305848000);
+        
+    
+        var popup_5cfd1c2798bd4660b53501688fbb1700 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_289061514ec4e221086c2bef10b7e610 = $(`<div id="html_289061514ec4e221086c2bef10b7e610" style="width: 100.0%; height: 100.0%;">Truck 4 Stop 8 (Depot)</div>`)[0];
+                popup_5cfd1c2798bd4660b53501688fbb1700.setContent(html_289061514ec4e221086c2bef10b7e610);
+            
+        
+
+        marker_34438d34acabbcfb2b6b9e7bd716fba3.bindPopup(popup_5cfd1c2798bd4660b53501688fbb1700)
+        ;
+
+        
+    
+    
+            var marker_4ba5a6f4b9c53ee4ba9b883a4b2169e2 = L.marker(
+                [13.1262694, 77.6297344],
+                {
+}
+            ).addTo(map_39086c9fbfb4fc2d244940f305848000);
+        
+    
+        var popup_5ed086ff30c81df2fb0554ce1e6fd036 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c62ae5b86504d5d99baba9f403f85ebb = $(`<div id="html_c62ae5b86504d5d99baba9f403f85ebb" style="width: 100.0%; height: 100.0%;">Truck 4 Stop 9 (Depot)</div>`)[0];
+                popup_5ed086ff30c81df2fb0554ce1e6fd036.setContent(html_c62ae5b86504d5d99baba9f403f85ebb);
+            
+        
+
+        marker_4ba5a6f4b9c53ee4ba9b883a4b2169e2.bindPopup(popup_5ed086ff30c81df2fb0554ce1e6fd036)
+        ;
+
+        
+    
+    
+            var marker_95c90eb22659fefc90f8a4207b511ade = L.marker(
+                [13.1262694, 77.6297344],
+                {
+}
+            ).addTo(map_39086c9fbfb4fc2d244940f305848000);
+        
+    
+        var popup_af6e423b0a3725f44e77ff49f29fca3e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7cc7bc8a19a372b8537141a70f9893f9 = $(`<div id="html_7cc7bc8a19a372b8537141a70f9893f9" style="width: 100.0%; height: 100.0%;">Truck 4 Stop 10 (Depot)</div>`)[0];
+                popup_af6e423b0a3725f44e77ff49f29fca3e.setContent(html_7cc7bc8a19a372b8537141a70f9893f9);
+            
+        
+
+        marker_95c90eb22659fefc90f8a4207b511ade.bindPopup(popup_af6e423b0a3725f44e77ff49f29fca3e)
+        ;
+
+        
+    
+    
+            var marker_6f5e7b97c39ec6fbb6f2f5903eac4e60 = L.marker(
+                [13.1262694, 77.6297344],
+                {
+}
+            ).addTo(map_39086c9fbfb4fc2d244940f305848000);
+        
+    
+        var popup_2ae0d1a9ad156b4a8d48972f653a1c7c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5b7c3e354b0ddc75d9143f3bceee0652 = $(`<div id="html_5b7c3e354b0ddc75d9143f3bceee0652" style="width: 100.0%; height: 100.0%;">Truck 4 Stop 11 (Depot)</div>`)[0];
+                popup_2ae0d1a9ad156b4a8d48972f653a1c7c.setContent(html_5b7c3e354b0ddc75d9143f3bceee0652);
+            
+        
+
+        marker_6f5e7b97c39ec6fbb6f2f5903eac4e60.bindPopup(popup_2ae0d1a9ad156b4a8d48972f653a1c7c)
+        ;
+
+        
+    
+    
+            var marker_e0220fc3bf5c959b54f807b03041a17a = L.marker(
+                [13.1262694, 77.6297344],
+                {
+}
+            ).addTo(map_39086c9fbfb4fc2d244940f305848000);
+        
+    
+        var popup_8e7d95f41c92eb195abec9dda603895e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_44dcb342c58cccb22e38a11ec7c104df = $(`<div id="html_44dcb342c58cccb22e38a11ec7c104df" style="width: 100.0%; height: 100.0%;">Truck 4 Stop 12 (Depot)</div>`)[0];
+                popup_8e7d95f41c92eb195abec9dda603895e.setContent(html_44dcb342c58cccb22e38a11ec7c104df);
+            
+        
+
+        marker_e0220fc3bf5c959b54f807b03041a17a.bindPopup(popup_8e7d95f41c92eb195abec9dda603895e)
+        ;
+
+        
+    
+</script>
+</html>
