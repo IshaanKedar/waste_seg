@@ -4,7 +4,7 @@ import time
 from datetime import datetime
 
 # Replace with your ESP32's IP address
-ESP32_IP = "172.20.10.10"  # Check Serial Monitor for actual IP
+ESP32_IP = "172.20.10.2"  # Check Serial Monitor for actual IP
 URL = f"http://{ESP32_IP}/data"
 
 # CSV file to store data
