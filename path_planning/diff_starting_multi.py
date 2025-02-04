@@ -60,50 +60,60 @@ def solve_multi_truck_vrp_combined(distance_matrix, num_trucks):
         return routes
     else:
         return None
-    
-# to save each map separately
-# def plot_multi_truck_routes(G, routes, start_nodes, bin_nodes, num_trucks, colors=["red", "blue", "green", "purple"]):
-#     for truck_id, route in enumerate(routes):
-#         route_map = folium.Map(location=(G.nodes[start_nodes[0]]['y'], G.nodes[start_nodes[0]]['x']), zoom_start=14)  # New map for each truck
-#         truck_route_coords = []
-#         for node_index_in_combined in route:
-#             actual_node_id = combined_nodes[node_index_in_combined]
-#             coord = (G.nodes[actual_node_id]['y'], G.nodes[actual_node_id]['x'])
-#             truck_route_coords.append(coord)
-
-#         if truck_route_coords:
-#             folium.PolyLine(truck_route_coords, color=colors[truck_id % len(colors)], weight=5).add_to(route_map)
-#             for stop_num, coord in enumerate(truck_route_coords):
-#                 popup_text = f"Truck {truck_id+1} Stop {stop_num+1}"
-#                 if node_index_in_combined < num_trucks:
-#                     popup_text += " (Depot)"
-#                 folium.Marker(coord, popup=popup_text).add_to(route_map)
-
-#         route_map.save(f"multi_truck_routes_truck_{truck_id + 1}.html")  # Save each map separately
-
-
-# to have a combined map 
 
 def plot_multi_truck_routes(G, routes, start_nodes, bin_nodes, num_trucks, colors=["red", "blue", "green", "purple"]):
     route_map = folium.Map(location=(G.nodes[start_nodes[0]]['y'], G.nodes[start_nodes[0]]['x']), zoom_start=14)
 
     for truck_id, route in enumerate(routes):
-        truck_route_coords = []
+        detailed_route_edges = []
+        for i in range(len(route) - 1):
+            from_node_index = route[i]
+            to_node_index = route[i+1]
+            from_node_id = combined_nodes[from_node_index]
+            to_node_id = combined_nodes[to_node_index]
+
+            try:
+                detailed_path_nodes = nx.shortest_path(G, from_node_id, to_node_id, weight="length")
+                for k in range(len(detailed_path_nodes) - 1):
+                    u = detailed_path_nodes[k]
+                    v = detailed_path_nodes[k+1]
+                    detailed_route_edges.append((u, v))
+
+            except nx.NetworkXNoPath:
+                print(f"No detailed path found between {from_node_id} and {to_node_id}")
+                continue
+
+        # Plot detailed paths (edges)  - KEY CHANGE HERE
+        for u, v in detailed_route_edges:
+            try:
+                # Get edge data.  This is the most robust way.
+                edge_data = G.get_edge_data(u, v)  # Handles simple graphs and multigraphs
+
+                if edge_data is not None: # Check if edge data exists
+                    x1 = G.nodes[u]['y']
+                    y1 = G.nodes[u]['x']
+                    x2 = G.nodes[v]['y']
+                    y2 = G.nodes[v]['x']
+                    folium.PolyLine([(x1, y1), (x2, y2)], color=colors[truck_id % len(colors)], weight=3).add_to(route_map)
+                else:
+                    print(f"No edge data found for edge ({u}, {v})")
+
+            except KeyError:
+                print(f"Node or edge ({u}, {v}) not found in graph G.")
+
+
+        # Plot markers for stops (start and bins)
         for node_index_in_combined in route:
             actual_node_id = combined_nodes[node_index_in_combined]
             coord = (G.nodes[actual_node_id]['y'], G.nodes[actual_node_id]['x'])
-            truck_route_coords.append(coord)
+            popup_text = f"Truck {truck_id+1} Stop {route.index(node_index_in_combined)+1}"
+            if node_index_in_combined < num_trucks:
+                popup_text += " (Depot)"
+            folium.Marker(coord, popup=popup_text).add_to(route_map)
 
-        if truck_route_coords:
-            # Use different colors for each truck
-            folium.PolyLine(truck_route_coords, color=colors[truck_id % len(colors)], weight=5).add_to(route_map)  
-            for stop_num, coord in enumerate(truck_route_coords):
-                popup_text = f"Truck {truck_id+1} Stop {stop_num+1}"
-                if node_index_in_combined < num_trucks:
-                    popup_text += " (Depot)"
-                folium.Marker(coord, popup=popup_text).add_to(route_map)
+    route_map.save("multi_truck_routes_all_trucks.html")
 
-    route_map.save("multi_truck_routes_all_trucks.html")  # Save combined map
+
 
 # ----- Setup Data -----
 
@@ -118,7 +128,8 @@ garbage_bins = [
     [37.77304514024724, -122.46309844177537],
     [37.79611810369347, -122.44291183057653],
     [37.79823320727075, -122.45028679900298],
-    
+
+
 ]
 
 num_trucks = 4
